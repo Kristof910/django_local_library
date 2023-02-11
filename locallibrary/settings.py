@@ -26,8 +26,8 @@ SECRET_KEY = SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['web-production-361c.up.railway.app', '127.0.0.1']
+CSRF_TRUSTED_ORIGINS = ['web-production-361c.up.railway.app']
 
 # Application definition
 
