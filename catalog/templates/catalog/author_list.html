@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Author List</h1>
+  {% if author_list %}
+  <ul>
+    {% for author in author_list %}
+      <li>
+        <!-- This is a method from the models.py, you can call any methods, this works only with methods which doesn't have any arguments because there are no ways to pass arguments-->
+        <a href="{{ author.get_absolute_url }}">{{ author.first_name }} {{ author.last_name }}</a>, Books: ({{author.book_set.count}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no authors saved.</p>
+  {% endif %}
+{% endblock %}
