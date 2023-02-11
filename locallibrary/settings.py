@@ -150,4 +150,3 @@ STATIC_URL = '/static/'
 # https://pypi.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-PORT = int(os.environ.get('PORT', 8000))
