@@ -22,19 +22,19 @@ from django.conf.urls.static import static
 # if you combine them it won't work
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path("admin/", admin.site.urls),
 ]
 
 urlpatterns += [
     # adds the /catalog endpoint
-    path('catalog/', include('catalog.urls')),
+    path("catalog/", include("catalog.urls")),
     # redirects main page to /catalog
-    path('', RedirectView.as_view(url='catalog/', permanent=True)),
+    path("", RedirectView.as_view(url="catalog/", permanent=True)),
 ]
 
 # this is for CSS, JS, images
 # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += [
-    path('accounts/', include('django.contrib.auth.urls')),
+    path("accounts/", include("django.contrib.auth.urls")),
 ]
